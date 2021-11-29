@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PageTemplate from '../components/templateMovieListPage'
 import { getTrendingMovies } from "../api/tmdb-api";
+import AddToFavoritesIcon from '../components/cardIcons/addToFavorites'
 
 
 const Trending = (props) => {
@@ -28,7 +29,15 @@ const Trending = (props) => {
     <PageTemplate
       title='Trending Movies'
       movies={movies}
-      selectFavorite={addToFavorites}
+      action={(movie) => {
+        return (
+          <>
+          <AddToFavoritesIcon movie={movie}/>
+          
+          </>
+        );
+      }}
+      
     />
   );
 };
