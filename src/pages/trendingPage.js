@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PageTemplate from '../components/templateMovieListPage'
 import { getTrendingMovies } from "../api/tmdb-api";
-import { Movie } from "@material-ui/icons";
+
 
 const Trending = (props) => {
   const [movies, setMovies] = useState([]);
